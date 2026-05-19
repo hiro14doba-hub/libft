@@ -6,16 +6,21 @@
 /*   By: hdobashi <hdobashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/13 20:23:05 by hdobashi          #+#    #+#             */
-/*   Updated: 2026/05/19 15:53:15 by hdobashi         ###   ########.fr       */
+/*   Updated: 2026/05/19 18:45:33 by hdobashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {
 	char	c;
 
-	if (n == "-2147483648")
+	if (n == -2147483648)
+	{
 		write(fd, "-2147483648", 11);
+		return ;
+	}
 	if (n < 0)
 	{
 		write(fd, "-", 1);

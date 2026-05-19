@@ -6,7 +6,7 @@
 /*   By: hdobashi <hdobashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/07 15:41:52 by hdobashi          #+#    #+#             */
-/*   Updated: 2026/05/19 15:57:02 by hdobashi         ###   ########.fr       */
+/*   Updated: 2026/05/19 18:56:00 by hdobashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,13 @@ char	*ft_strchr(const char *s, int c)
 	i = 0;
 	while (s[i] != '\0')
 	{
-		if (s[i] == c)
+		if (s[i] == (char)c)
 			return ((char *)&s[i]);
 		i++;
 	}
-	return (0);
+	if (s[i] == ((char)c))
+		return ((char *)&s[i]);
+	return (NULL);
 }
 
 // #include <stdio.h>

@@ -6,13 +6,15 @@
 /*   By: hdobashi <hdobashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/07 15:43:17 by hdobashi          #+#    #+#             */
-/*   Updated: 2026/05/07 20:54:12 by hdobashi         ###   ########.fr       */
+/*   Updated: 2026/05/19 17:04:40 by hdobashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *s)
+#include "libft.h"
+
+size_t	ft_strlen(const char *s)
 {
-	int	len;
+	size_t	len;
 
 	len = 0;
 	while (s[len] != '\0')

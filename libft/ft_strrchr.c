@@ -6,11 +6,13 @@
 /*   By: hdobashi <hdobashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/07 15:44:48 by hdobashi          #+#    #+#             */
-/*   Updated: 2026/05/07 20:54:09 by hdobashi         ###   ########.fr       */
+/*   Updated: 2026/05/19 18:44:13 by hdobashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	ft_strrchr(const char *s, int c)
+#include "libft.h"
+
+char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
 
@@ -19,12 +21,13 @@ char	ft_strrchr(const char *s, int c)
 	{
 		i++;
 	}
-	while (i != 0)
+	while (i >= 0)
 	{
-		if (s[i] == c)
-			return (s[i]);
+		if (s[i] == (char)c)
+			return ((char *)&s[i]);
+		i--;
 	}
-	return (0);
+	return (NULL);
 }
 
 // #include <stdio.h>

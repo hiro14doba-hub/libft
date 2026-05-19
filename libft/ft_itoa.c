@@ -6,20 +6,22 @@
 /*   By: hdobashi <hdobashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/13 20:52:10 by hdobashi          #+#    #+#             */
-/*   Updated: 2026/05/19 16:08:12 by hdobashi         ###   ########.fr       */
+/*   Updated: 2026/05/19 18:46:58 by hdobashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	divid_10(int n)
+static int	divid_10(long n)
 {
 	int	i;
 
 	i = 0;
 	if (n <= 0)
+	{
 		i++;
-	n = -n;
+		n = -n;
+	}
 	while (n > 0)
 	{
 		n = n / 10;

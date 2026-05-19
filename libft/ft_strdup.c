@@ -6,7 +6,7 @@
 /*   By: hdobashi <hdobashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/13 20:56:20 by hdobashi          #+#    #+#             */
-/*   Updated: 2026/05/19 15:57:06 by hdobashi         ###   ########.fr       */
+/*   Updated: 2026/05/19 16:51:01 by hdobashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,10 @@ char	*ft_strdup(const char *s)
 		return (NULL);
 	while (i < len)
 	{
-		dest[i] == s[i];
+		dest[i] = s[i];
 		i++;
 	}
+	dest[i] = '\0';
 	return (dest);
 }
 

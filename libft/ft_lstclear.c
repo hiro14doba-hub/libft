@@ -6,7 +6,7 @@
 /*   By: hdobashi <hdobashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/14 04:13:18 by hdobashi          #+#    #+#             */
-/*   Updated: 2026/05/19 15:51:16 by hdobashi         ###   ########.fr       */
+/*   Updated: 2026/05/19 16:46:35 by hdobashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*curr;
 	t_list	*next;
 
-	curr = *lst;
 	if (!*lst || !del)
 		return ;
+	curr = *lst;
 	while (curr != NULL)
 	{
 		next = curr->next;

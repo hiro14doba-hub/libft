@@ -6,7 +6,7 @@
 /*   By: hdobashi <hdobashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/13 20:55:40 by hdobashi          #+#    #+#             */
-/*   Updated: 2026/05/19 16:34:03 by hdobashi         ###   ########.fr       */
+/*   Updated: 2026/05/19 16:52:29 by hdobashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ static char	*word_splitter(const char *s, char c)
 static void	*free_all(char **words, int j)
 {
 	while (j > 0)
-		free(words[j--]);
+		free(words[--j]);
 	free(words);
 	return (NULL);
 }
@@ -95,5 +95,5 @@ char	**ft_split(char const *s, char c)
 	words = (char **)malloc(sizeof(char *) * (ft_count_words(s, c) + 1));
 	if (!words)
 		return (NULL);
-	return (fill_wods(s, c, words));
+	return (fill_words(s, c, words));
 }

@@ -6,7 +6,7 @@
 /*   By: hdobashi <hdobashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/07 18:28:21 by hdobashi          #+#    #+#             */
-/*   Updated: 2026/05/19 15:58:34 by hdobashi         ###   ########.fr       */
+/*   Updated: 2026/05/19 17:00:59 by hdobashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	if (!s1 || !set)
 		return (NULL);
+	if (ft_strlen(s1) == 0)
+		return (ft_strdup(""));
 	start = 0;
 	end = ft_strlen(s1) - 1;
 	while (s1[start] != '\0' && is_in_set(s1[start], set) == 1)

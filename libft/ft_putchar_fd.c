@@ -6,9 +6,11 @@
 /*   By: hdobashi <hdobashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/13 20:13:29 by hdobashi          #+#    #+#             */
-/*   Updated: 2026/05/19 15:52:10 by hdobashi         ###   ########.fr       */
+/*   Updated: 2026/05/19 16:55:49 by hdobashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {

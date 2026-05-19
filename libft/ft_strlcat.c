@@ -6,7 +6,7 @@
 /*   By: hdobashi <hdobashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/07 15:42:19 by hdobashi          #+#    #+#             */
-/*   Updated: 2026/05/19 15:57:41 by hdobashi         ###   ########.fr       */
+/*   Updated: 2026/05/19 17:03:02 by hdobashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,23 +19,20 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	size_t	srclen;
 
 	destlen = 0;
-	srclen = 0;
-	i = 0;
-	while (dest[destlen] != '\0')
+	srclen = ft_strlen(src);
+	while (destlen < size && dest[destlen] != '\0')
 		destlen++;
-	while (src[srclen] != '\0')
-		srclen++;
-	while (i <= size - 1 && src[i] != '\0')
+	if (destlen == size)
+		return (size + srclen);
+	i = 0;
+	while (destlen + i < size - 1 && src[i] != '\0')
 	{
 		dest[destlen + i] = src[i];
 		i++;
 	}
-	if (src[1] == '\0')
-		return (destlen + i);
-	else
-		return (destlen + srclen);
+	dest[destlen + i] = '\0';
+	return (destlen + srclen);
 }
-
 // #include <stdio.h>
 
 // int	main(void)

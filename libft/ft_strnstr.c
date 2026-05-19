@@ -6,11 +6,11 @@
 /*   By: hdobashi <hdobashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/07 15:44:13 by hdobashi          #+#    #+#             */
-/*   Updated: 2026/05/13 20:58:51 by hdobashi         ###   ########.fr       */
+/*   Updated: 2026/05/19 17:05:00 by hdobashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
