@@ -6,21 +6,11 @@
 /*   By: hdobashi <hdobashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/07 17:55:05 by hdobashi          #+#    #+#             */
-/*   Updated: 2026/05/14 14:24:30 by hdobashi         ###   ########.fr       */
+/*   Updated: 2026/05/19 15:57:37 by hdobashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	ft_strlen(const char *s)
-{
-	int	len;
-
-	len = 0;
-	while (s[len] != '\0')
-		len++;
-	return (len);
-}
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

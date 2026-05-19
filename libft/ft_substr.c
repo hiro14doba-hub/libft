@@ -6,21 +6,11 @@
 /*   By: hdobashi <hdobashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/07 17:21:30 by hdobashi          #+#    #+#             */
-/*   Updated: 2026/05/14 14:26:29 by hdobashi         ###   ########.fr       */
+/*   Updated: 2026/05/19 15:58:45 by hdobashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	ft_strlen(const char *s)
-{
-	int	len;
-
-	len = 0;
-	while (s[len] != '\0')
-		len++;
-	return (len);
-}
 
 char	*ft_substr(const char *s, unsigned int start, size_t len)
 {

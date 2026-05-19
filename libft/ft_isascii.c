@@ -6,7 +6,7 @@
 /*   By: hdobashi <hdobashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/07 15:37:59 by hdobashi          #+#    #+#             */
-/*   Updated: 2026/05/07 20:54:29 by hdobashi         ###   ########.fr       */
+/*   Updated: 2026/05/19 15:49:29 by hdobashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ int	ft_isascii(int c)
 	return (0);
 }
 
-int	main(void)
-{
-	int	c;
+// int	main(void)
+// {
+// 	int	c;
 
-	c = 'a';
-	printf("%d", ft_isascii(c));
-	return (0);
-}
+// 	c = 'a';
+// 	printf("%d", ft_isascii(c));
+// 	return (0);
+// }

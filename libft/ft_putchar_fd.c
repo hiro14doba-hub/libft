@@ -6,11 +6,11 @@
 /*   By: hdobashi <hdobashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/13 20:13:29 by hdobashi          #+#    #+#             */
-/*   Updated: 2026/05/13 20:15:16 by hdobashi         ###   ########.fr       */
+/*   Updated: 2026/05/19 15:52:10 by hdobashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
-    write(fd,&c,1);
+	write(fd, &c, 1);
 }

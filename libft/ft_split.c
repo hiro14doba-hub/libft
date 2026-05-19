@@ -6,11 +6,12 @@
 /*   By: hdobashi <hdobashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/13 20:55:40 by hdobashi          #+#    #+#             */
-/*   Updated: 2026/05/14 14:24:03 by hdobashi         ###   ########.fr       */
+/*   Updated: 2026/05/19 15:56:45 by hdobashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
+
 static int	ft_count_words(const char *s, char c)
 {
 	int	i;
@@ -25,7 +26,7 @@ static int	ft_count_words(const char *s, char c)
 			words++;
 			while (s[i] && s[i] != c)
 				i++;
-		}	
+		}
 		else
 			i++;
 	}
@@ -40,7 +41,7 @@ static char	*word_splitter(const char *s, char c)
 	i = 0;
 	while (s[i] && s[i] != c)
 		i++;
-	word = (char *) malloc(sizeof(char) * (i + 1));
+	word = (char *)malloc(sizeof(char) * (i + 1));
 	if (!word)
 		return (NULL);
 	i = 0;
@@ -55,12 +56,12 @@ static char	*word_splitter(const char *s, char c)
 
 static void	free_all(char **words, int j)
 {
-    while (j > 0)
-    {
-        j--;
-        free(words[j]);
-    }
-    free(words);
+	while (j > 0)
+	{
+		j--;
+		free(words[j]);
+	}
+	free(words);
 }
 
 char	**ft_split(char const *s, char c)
@@ -71,9 +72,9 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	j = 0;
-    if(!s)
-        return(NULL);
-	words = (char **) malloc(sizeof(char *) * (ft_count_words(s, c) + 1));
+	if (!s)
+		return (NULL);
+	words = (char **)malloc(sizeof(char *) * (ft_count_words(s, c) + 1));
 	if (!words)
 		return (NULL);
 	while (s[i])
@@ -81,11 +82,11 @@ char	**ft_split(char const *s, char c)
 		if (s[i] != c)
 		{
 			words[j] = word_splitter(&s[i], c);
-            if(!words[j])
-            {
-                free_all(words,j);
-                return(NULL);
-            }
+			if (!words[j])
+			{
+				free_all(words, j);
+				return (NULL);
+			}
 			while (s[i] && s[i] != c)
 				i++;
 			j++;

@@ -6,20 +6,20 @@
 /*   By: hdobashi <hdobashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/13 19:52:00 by hdobashi          #+#    #+#             */
-/*   Updated: 2026/05/13 20:01:01 by hdobashi         ###   ########.fr       */
+/*   Updated: 2026/05/19 15:57:27 by hdobashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_striteri(char *s, void (*f)(unsigned int,char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-    unsigned int i;
+	unsigned int	i;
 
-    i = 0;
-    if(!s || !f)
-        return;
-    while(s[i] !='\0')
-    {
-        f(i,&s[i]);
-        i++;
-    }
+	i = 0;
+	if (!s || !f)
+		return ;
+	while (s[i] != '\0')
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }

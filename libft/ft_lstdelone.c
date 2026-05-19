@@ -6,15 +6,16 @@
 /*   By: hdobashi <hdobashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/14 04:07:01 by hdobashi          #+#    #+#             */
-/*   Updated: 2026/05/14 04:50:55 by hdobashi         ###   ########.fr       */
+/*   Updated: 2026/05/19 15:51:23 by hdobashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-void ft_lstdelone(t_list *lst, void (*del)(void*))
+
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-    if (!lst || !del)
-        return;
-    del(lst->content);
-    free(lst);
+	if (!lst || !del)
+		return ;
+	del(lst->content);
+	free(lst);
 }
