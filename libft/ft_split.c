@@ -6,7 +6,7 @@
 /*   By: hdobashi <hdobashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/13 20:55:40 by hdobashi          #+#    #+#             */
-/*   Updated: 2026/05/19 15:56:45 by hdobashi         ###   ########.fr       */
+/*   Updated: 2026/05/19 16:34:03 by hdobashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,46 +54,46 @@ static char	*word_splitter(const char *s, char c)
 	return (word);
 }
 
-static void	free_all(char **words, int j)
+static void	*free_all(char **words, int j)
 {
 	while (j > 0)
-	{
-		j--;
-		free(words[j]);
-	}
+		free(words[j--]);
 	free(words);
+	return (NULL);
+}
+
+static char	**fill_words(char const *s, char c, char **words)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	j = 0;
+	while (s[i])
+	{
+		while (s[i] == c)
+			i++;
+		if (!s[i])
+			break ;
+		words[j] = word_splitter(&s[i], c);
+		if (!words[j])
+			return (free_all(words, j));
+		while (s[i] && s[i] != c)
+			i++;
+		j++;
+	}
+	words[j] = NULL;
+	return (words);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	int		i;
-	int		j;
 	char	**words;
 
-	i = 0;
-	j = 0;
 	if (!s)
 		return (NULL);
 	words = (char **)malloc(sizeof(char *) * (ft_count_words(s, c) + 1));
 	if (!words)
 		return (NULL);
-	while (s[i])
-	{
-		if (s[i] != c)
-		{
-			words[j] = word_splitter(&s[i], c);
-			if (!words[j])
-			{
-				free_all(words, j);
-				return (NULL);
-			}
-			while (s[i] && s[i] != c)
-				i++;
-			j++;
-		}
-		else
-			i++;
-	}
-	words[j] = NULL;
-	return (words);
+	return (fill_wods(s, c, words));
 }

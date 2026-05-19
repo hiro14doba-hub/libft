@@ -6,13 +6,13 @@
 /*   By: hdobashi <hdobashi@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/07 15:37:59 by hdobashi          #+#    #+#             */
-/*   Updated: 2026/05/19 15:49:29 by hdobashi         ###   ########.fr       */
+/*   Updated: 2026/05/19 16:18:02 by hdobashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isascii(int c)
 {
-	if (c >= 0 && c >= 127)
+	if (c >= 0 && c <= 127)
 		return (1);
 	return (0);
 }
